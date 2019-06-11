@@ -1,37 +1,37 @@
 {
-  "name": "pointyapi-user-activation",
-  "version": "0.0.1",
-  "author": "stateless-studio",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc --p tsconfig.json",
-    "build:spec": "tsc --p tsconfig.json && tsc --p tsconfig.spec.json",
-    "postinstall": "tsc --p tsconfig.dist.json"
-  },
-  "dependencies": {
-    "pointyapi": "github:StatelessStudio/pointyapi#v2.1.0",
-    "typeorm": "^0.2.18"
-  },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "devDependencies": {
-    "@types/node": "^10.14.8",
-    "tslint": "^5.17.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.5.1",
-    "source-map-support": "^0.5.12"
-  },
-  "description": "*\"User module for PointyAPI\"*",
-  "directories": {
-    "test": "test"
-  },
-  "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StatelessStudio/pointyapi-user-activation.git"
-  },
-  "bugs": {
-    "url": "https://github.com/StatelessStudio/pointyapi-user-activation/issues"
-  },
-  "homepage": "https://github.com/StatelessStudio/pointyapi-user-activation#readme"
+	"name": "pointyapi-user-activation",
+	"version": "0.0.1",
+	"author": "stateless-studio",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc --p tsconfig.json",
+		"build:spec": "tsc --p tsconfig.json && tsc --p tsconfig.spec.json",
+		"postinstall": "tsc --p tsconfig.dist.json"
+	},
+	"dependencies": {
+		"pointyapi": "github:StatelessStudio/pointyapi#v2.1.0",
+		"typeorm": "^0.2.18"
+	},
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"devDependencies": {
+		"@types/node": "^10.14.8",
+		"tslint": "^5.17.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"typescript": "^3.5.1",
+		"source-map-support": "^0.5.12"
+	},
+	"description": "*\"User Activation module for PointyAPI\"*",
+	"directories": {
+		"test": "test"
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/StatelessStudio/pointyapi-user-activation.git"
+	},
+	"bugs": {
+		"url": "https://github.com/StatelessStudio/pointyapi-user-activation/issues"
+	},
+	"homepage": "https://github.com/StatelessStudio/pointyapi-user-activation#readme"
 }
