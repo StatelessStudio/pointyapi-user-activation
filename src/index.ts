@@ -13,8 +13,8 @@ export class PointyUserActivation {
 
 	// PointyAPI Mailer module
 	public mailer;
-	public welcomeTemplate: string = 'welcome';
-	public emailUpdateTemplate: string = 'user-email-updated';
+	public welcomeTemplate = 'welcome';
+	public emailUpdateTemplate = 'user-email-updated';
 
 	// PointyAPI User Type
 	public userType;
@@ -34,11 +34,15 @@ export class PointyUserActivation {
 	 * Initialize
 	 * @param mailer Instance of PointyAPI Mailer module
 	 * @param userType User type
-	 * @param jwtBearer (Optional) Custom jwtBearer instances
+	 * @param jwt (Optional) Custom jwtBearer instances
 	 */
-	public init(mailer, userType, jwtBearer?) {
+	public init(mailer, userType, jwt?) {
 		this.mailer = mailer;
 		this.userType = userType;
+
+		if (jwt) {
+			this.jwtBearer = jwt;
+		}
 	}
 
 	/**
@@ -95,11 +99,22 @@ export class PointyUserActivation {
 			// No conflict
 			request.user = user;
 
-			// Send activation email
-			return await this.send(request, response).catch((error) =>
-				pointy.log(error)
-			);
+			return true;
 		}
+	}
+
+	/**
+	 * User afterPost hook
+	 * @param user User object (pass `this` from your hook)
+	 * @param request Request object
+	 * @param response Response object
+	 * @return Async boolean
+	 */
+	public async afterPost(user, request, response) {
+		// Send activation email
+		return await this.send(request, response).catch((error) =>
+			pointy.log(error)
+		);
 	}
 
 	/**
@@ -142,7 +157,7 @@ export class PointyUserActivation {
 				: this.emailUpdateTemplate;
 
 		// Get template
-		let template = this.mailer.getTemplate(templateKey);
+		const template = this.mailer.getTemplate(templateKey);
 
 		// Check template
 		if (template) {
