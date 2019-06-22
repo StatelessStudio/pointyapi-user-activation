@@ -9,17 +9,17 @@
 		"postinstall": "tsc --p tsconfig.dist.json"
 	},
 	"dependencies": {
-		"pointyapi": "github:StatelessStudio/pointyapi#v2.1.0",
+		"pointyapi": "^3.0.0",
 		"typeorm": "^0.2.18"
 	},
 	"main": "./index.js",
 	"types": "./index.d.ts",
 	"devDependencies": {
-		"@types/node": "^10.14.8",
+		"@types/node": "^10.14.10",
+		"source-map-support": "^0.5.12",
 		"tslint": "^5.17.0",
 		"tslint-eslint-rules": "^5.4.0",
-		"typescript": "^3.5.1",
-		"source-map-support": "^0.5.12"
+		"typescript": "^3.5.1"
 	},
 	"description": "*\"User Activation module for PointyAPI\"*",
 	"directories": {
