@@ -227,7 +227,7 @@ export class PointyUserActivation {
 				}
 
 				// Get user
-				let user: any = await getRepository(this.userType)
+				const user: any = await getRepository(this.userType)
 					.findOne({ id: decoded.id })
 					.catch((error) => response.error('Could not load user'));
 
