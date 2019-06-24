@@ -109,7 +109,7 @@ export class PointyUserActivation {
 	 */
 	public async afterPost(user, request, response) {
 		// Send activation email
-		return await this.send(request, response).catch((error) =>
+		return await this.send(user, request, response).catch((error) =>
 			pointy.log(error)
 		);
 	}
@@ -140,13 +140,7 @@ export class PointyUserActivation {
 	 * @param response Response object
 	 * @return Async boolean
 	 */
-	public async send(request, response) {
-		// Check user
-		if (!request.user) {
-			response.unauthorizedResponder();
-			return false;
-		}
-
+	public async send(user, request, response) {
 		// Get appropriate template
 		const templateKey =
 			request.method.toLowerCase() === 'post'
@@ -159,18 +153,15 @@ export class PointyUserActivation {
 		// Check template
 		if (template) {
 			// Copy user
-			const user = Object.assign({}, request.user);
-			user.activation_link = this.createLink(user);
+			const userobj = Object.assign({}, user);
+			userobj.activation_link = this.createLink(user);
 
 			// Send email
 			return await this.mailer
 				.sendFromTemplate(
-					user.tempEmail || user.email,
-					{
-						subject: template.subject,
-						body: template.body
-					},
-					user
+					userobj.tempEmail || userobj.email,
+					template,
+					userobj
 				)
 				.then(() => true)
 				.catch(() => {
@@ -192,7 +183,7 @@ export class PointyUserActivation {
 	 * Resend activation endpoint
 	 */
 	public async resendEndpoint(request, response, next) {
-		const result = await this.send(request, response);
+		const result = await this.send(request.user, request, response);
 
 		if (result) {
 			response.sendStatus(204);
