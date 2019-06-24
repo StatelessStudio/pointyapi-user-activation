@@ -96,9 +96,6 @@ export class PointyUserActivation {
 			return false;
 		}
 		else {
-			// No conflict
-			request.user = user;
-
 			return true;
 		}
 	}
