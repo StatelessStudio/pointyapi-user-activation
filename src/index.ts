@@ -127,7 +127,10 @@ export class PointyUserActivation {
 			user.email !== request.payload['email'] &&
 			user.email !== request.payload['tempEmail']
 		) {
-			return this.beforePost(user, request, response);
+			return (
+				this.beforePost(user, request, response) &&
+				this.afterPost(user, request, response)
+			);
 		}
 		else {
 			return true;
