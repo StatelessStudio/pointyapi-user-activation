@@ -1,5 +1,11 @@
 # PointyApi User Activation Module Changelog
 
+## [0.0.4] Jul-14-2019
+
+### Fixes
+- Updated dependencies
+- Updated dependency with security fix `lodash`
+
 ## [0.0.3] Jun-24-2019 - afterPatch()
 
 ### Fixes
