@@ -9,15 +9,15 @@
 		"postinstall": "tsc --p tsconfig.dist.json"
 	},
 	"dependencies": {
-		"pointyapi": "^3.0.2",
+		"pointyapi": "^3.2.0",
 		"typeorm": "^0.2.18"
 	},
 	"main": "./index.js",
 	"types": "./index.d.ts",
 	"devDependencies": {
-		"@types/node": "^10.14.12",
-		"source-map-support": "^0.5.12",
-		"tslint": "^5.17.0",
+		"@types/node": "^10.14.16",
+		"source-map-support": "^0.5.13",
+		"tslint": "^5.19.0",
 		"tslint-eslint-rules": "^5.4.0",
 		"typescript": "^3.5.3"
 	},
