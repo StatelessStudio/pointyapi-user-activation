@@ -1,5 +1,9 @@
 # PointyApi User Activation Module Changelog
 
+## [0.0.5] Aug-26-2019
+
+### Fixes
+
 ## [0.0.4] Jul-14-2019
 
 ### Fixes
