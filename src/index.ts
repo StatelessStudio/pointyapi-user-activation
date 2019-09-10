@@ -236,7 +236,11 @@ export class PointyUserActivation {
 
 					// Add to mailing list
 					await this.mailer
-						.listAdd(user.email, user.fname, {})
+						.listAdd(
+							user.email,
+							user.fname || user.username || user.email,
+							{}
+						)
 						.catch((error) => {
 							this.log(
 								`Could not add email to list: ${user.email}`,

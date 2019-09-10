@@ -1,5 +1,10 @@
 # PointyApi User Activation Module Changelog
 
+## [0.0.6] Sep-10-2019
+
+### Fixes
+- [Issue #4] Hook fails when user fname is not set
+
 ## [0.0.5] Aug-26-2019
 
 ### Fixes
