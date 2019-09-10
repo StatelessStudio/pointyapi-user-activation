@@ -15,11 +15,11 @@
 	"main": "./index.js",
 	"types": "./index.d.ts",
 	"devDependencies": {
-		"@types/node": "^10.14.16",
+		"@types/node": "^10.14.17",
 		"source-map-support": "^0.5.13",
-		"tslint": "^5.19.0",
+		"tslint": "^5.20.0",
 		"tslint-eslint-rules": "^5.4.0",
-		"typescript": "^3.5.3"
+		"typescript": "^3.6.2"
 	},
 	"description": "*\"User Activation module for PointyAPI\"*",
 	"directories": {
