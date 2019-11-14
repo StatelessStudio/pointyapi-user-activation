@@ -3,6 +3,7 @@
 ## [0.0.7] Nov-14-2019
 
 ### Fixes
+- Upgrade to node 12
 - npm update
 
 ## [0.0.6] Sep-10-2019
