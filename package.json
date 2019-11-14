@@ -9,17 +9,17 @@
 		"postinstall": "tsc --p tsconfig.dist.json"
 	},
 	"dependencies": {
-		"pointyapi": "^3.2.0",
-		"typeorm": "^0.2.18"
+		"pointyapi": "^3.3.0",
+		"typeorm": "^0.2.20"
 	},
 	"main": "./index.js",
 	"types": "./index.d.ts",
 	"devDependencies": {
 		"@types/node": "^10.14.17",
-		"source-map-support": "^0.5.13",
-		"tslint": "^5.20.0",
+		"source-map-support": "^0.5.16",
+		"tslint": "^5.20.1",
 		"tslint-eslint-rules": "^5.4.0",
-		"typescript": "^3.6.2"
+		"typescript": "^3.7.2"
 	},
 	"description": "*\"User Activation module for PointyAPI\"*",
 	"directories": {
