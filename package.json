@@ -1,6 +1,6 @@
 {
 	"name": "pointyapi-user-activation",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"author": "stateless-studio",
 	"license": "MIT",
 	"scripts": {
