@@ -1,5 +1,10 @@
 # PointyApi User Activation Module Changelog
 
+## [0.0.8] Nov-22-2019
+
+### Fixes
+- npm update
+
 ## [0.0.7] Nov-14-2019
 
 ### Fixes
