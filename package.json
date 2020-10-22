@@ -1,15 +1,15 @@
 {
 	"name": "pointyapi-user-activation",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"author": "stateless-studio",
 	"license": "MIT",
 	"scripts": {
 		"build": "tsc --p tsconfig.json",
 		"build:spec": "tsc --p tsconfig.json && tsc --p tsconfig.spec.json",
-		"postinstall": "tsc --p tsconfig.dist.json"
+		"prepare": "tsc --p tsconfig.dist.json"
 	},
 	"dependencies": {
-		"pointyapi": "^3.3.1",
+		"pointyapi": "^3.3.3",
 		"typeorm": "^0.2.20"
 	},
 	"main": "./index.js",
@@ -19,7 +19,7 @@
 		"source-map-support": "^0.5.16",
 		"tslint": "^5.20.1",
 		"tslint-eslint-rules": "^5.4.0",
-		"typescript": "^3.7.2"
+		"typescript": "^3.8.3"
 	},
 	"description": "*\"User Activation module for PointyAPI\"*",
 	"directories": {
